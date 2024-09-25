@@ -1,0 +1,6 @@
+@DistributionCenter.API_HostAddress = http://localhost:5234
+
+GET {{DistributionCenter.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
