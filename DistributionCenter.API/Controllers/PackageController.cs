@@ -40,6 +40,14 @@ namespace DistributionCenter.API.Controllers
             return Ok(package);
         }
 
+        [HttpGet()]
+        public async Task<IActionResult> Get()
+        {
+            var package = "Hey, this is a package";
+
+            return Ok(package);
+        }
+
         [HttpPut("{id}")]
         public void Put(int id, [FromBody] string value)
         {
