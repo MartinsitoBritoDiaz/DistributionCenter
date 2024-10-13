@@ -21,7 +21,7 @@ namespace DistributionCenter.API.Controllers
         public async Task<IActionResult> Post([FromBody] Package package)
         {
             if (package == null)
-            {
+            { 
                 return BadRequest("Package is null.");
             }
 
