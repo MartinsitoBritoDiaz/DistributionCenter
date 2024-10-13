@@ -7,7 +7,7 @@ namespace DistributionCenter.Infrastructure.Repositories
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private ApplicationContext _context;
+        private ApplicationDbContext _context;
         private readonly IRepositoryAsync<Customer> _customer;
         private readonly IRepositoryAsync<Employee> _employee;
         private readonly IRepositoryAsync<Package> _package;
@@ -43,7 +43,7 @@ namespace DistributionCenter.Infrastructure.Repositories
         }
 
 
-        public UnitOfWork(ApplicationContext context)
+        public UnitOfWork(ApplicationDbContext context)
         {
             _context = context;
         }

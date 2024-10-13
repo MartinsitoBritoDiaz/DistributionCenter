@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DistributionCenter.Application.Interfaces.Context;
 using DistributionCenter.Application.Interfaces.Repositories;
 using DistributionCenter.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
@@ -12,10 +11,10 @@ namespace DistributionCenter.Infrastructure.Repositories.Base
 {
     public class RepositoryAsync<TEntity> : IRepositoryAsync<TEntity> where TEntity : class
     {
-        private readonly ApplicationContext _context;
+        private readonly ApplicationDbContext _context;
         private readonly DbSet<TEntity> _dbSet;
 
-        public RepositoryAsync(ApplicationContext context)
+        public RepositoryAsync(ApplicationDbContext context)
         {
             _context = context;
             _dbSet = context.Set<TEntity>();

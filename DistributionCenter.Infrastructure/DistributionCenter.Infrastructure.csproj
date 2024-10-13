@@ -7,12 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DistributionCenter.Application\DistributionCenter.Application.csproj" />
     <ProjectReference Include="..\DistributionCenter.Domain\DistributionCenter.Domain.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Context\" />
   </ItemGroup>
 
   <ItemGroup>

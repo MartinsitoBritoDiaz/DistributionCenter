@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace DistributionCenter.Domain.Models
 {
@@ -9,11 +10,9 @@ namespace DistributionCenter.Domain.Models
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
         public DateTime ArriveDate { get; set; }
-        [ForeignKey("Employee")]
-        public int? EmployeeId { get; set; }
-        public Employee Employee { get; set; }
         [ForeignKey("Customer")]
         public int CustomerId { get; set; }
-        public Customer Customer { get; set; }
+        [JsonIgnore]
+        public Customer? Customer { get; set; }
     }
 }
