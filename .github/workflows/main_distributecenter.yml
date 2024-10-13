@@ -61,5 +61,5 @@ jobs:
         with:
           app-name: 'DistributeCenter'
           slot-name: 'Production'
-          package: ${{ runner.workspace }}/myapp
+          package: ${{env.DOTNET_ROOT}}/myapp
           
