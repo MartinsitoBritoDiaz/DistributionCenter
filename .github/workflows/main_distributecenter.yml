@@ -61,5 +61,5 @@ jobs:
         with:
           app-name: 'DistributeCenter'
           slot-name: 'Production'
-          package: .
+          package: ${{ tunner.workspace }}/myapp
           
